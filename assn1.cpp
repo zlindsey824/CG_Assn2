@@ -243,6 +243,16 @@ int main (int argc, char *argv[])
    loop until the end of the data is reached.  Then the window can be closed
    using the escape key.						  */
 
+
+	 FILE *fptr;
+
+	if ((fptr = fopen(argv[1])) == NULL){
+		printf("Error! opening file");
+
+		// Program exits if the file pointer returns NULL.
+		exit(1);
+	}
+
 	srand(time(NULL));
 	glutInit            ( &argc, argv );
        	glutInitDisplayMode ( GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH );
@@ -256,4 +266,6 @@ int main (int argc, char *argv[])
         init_window();				             //create_window
 
 	glutMainLoop        ( );                 // Initialize The Main Loop
+
+	fclose(fptr);
 }
