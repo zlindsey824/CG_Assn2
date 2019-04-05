@@ -1,7 +1,4 @@
-# This file uses centimeters as units for non-parametric coordinates.
 
-mtllib testTorus.mtl
-g default
 v 256.659009 278.152105 -282.167864
 v 166.659650 259.837486 -265.921860
 v 162.131887 190.145449 -204.101459
